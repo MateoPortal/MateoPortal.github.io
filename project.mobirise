@@ -1,0 +1,694 @@
+{
+  "settings": {
+    "name": "My Site",
+    "currentPage": "page1.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#232323",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#232323",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Rubik",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Rubik",
+        "display7Size": "1.2",
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "siteFonts": [],
+    "versionFirst": "4.7.6",
+    "uniqCompNum": 33,
+    "versionPublish": "4.11.2"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".icons-media-container": {
+              "display": "flex",
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              "-webkit-flex-direction": "row",
+              "flex-direction": "row",
+              "-webkit-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "padding-top": "4rem",
+              ".mbr-iconfont": {
+                "font-size": "96px",
+                "color": "rgb(255, 255, 255)"
+              },
+              ".icon-block": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            },
+            ".card": {
+              "padding-bottom": "1.5rem"
+            }
+          },
+          "_name": "header12",
+          "_customHTML": "<section class=\"header12\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" plugins=\"VimeoPlayer\" mbr-class=\"{'mbr-fullscreen': fullScreen,'mbr-parallax-background' :bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n\n        <select title=\"Columns\" name=\"cardsCount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#767676\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container  \">\n            <div class=\"media-container\">\n                <div class=\"col-md-12 align-center\">\n                    <h1 class=\"mbr-section-title pb-3 mbr-white mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                        PROCESOS DE INNOVACIÓN EN BIOINGENIERÍA</h1>\n                    <p class=\"mbr-text pb-3 mbr-white mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        Diabetes</p>\n                    <div class=\"mbr-section-btn align-center py-2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\">\n                        <a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.co\">MORE</a>\n                    </div>\n\n                    <div class=\"icons-media-container mbr-white\">\n                        <div class=\"card col-12 col-md-6\" mbr-class=\"{'col-lg-3':cardsCount=='4', 'col-lg-4':cardsCount=='3'}\">\n                            <div mbr-if=\"showIcons\" class=\"icon-block\">\n                            <a href=\"page1.html\">\n                                <span mbr-icon class=\"mbr-iconfont mbri-users\"></span>\n                            </a>\n                            </div>\n                            <h5 mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" class=\"mbr-fonts-style\">\n                                ¿Quiénes somos?</h5>\n                        </div>\n\n                        <div class=\"card col-12 col-md-6\" mbr-class=\"{'col-lg-3':cardsCount=='4', 'col-lg-4':cardsCount=='3'}\">\n                            <div mbr-if=\"showIcons\" class=\"icon-block\">\n                                <a href=\"https://docs.google.com/document/d/1-IQxpEL92kgAWxzl6aspnact1HtbE6EypfqacY_Bl8E/edit?usp=sharing\" target=\"_blank\">\n                                    <span mbr-icon class=\"mbr-iconfont mbri-sale\"></span>\n                                </a>\n                            </div>\n                            <h5 mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" class=\"mbr-fonts-style\">Investigación</h5>\n                        </div>\n\n                        <div class=\"card col-12 col-md-6\" mbr-class=\"{'col-lg-3':cardsCount=='4', 'col-lg-4':cardsCount=='3'}\" mbr-if=\"cardsCount>2\">\n                            <div mbr-if=\"showIcons\" class=\"icon-block\">\n                                <a href=\"https://mobirise.co/\">\n                                    <span mbr-icon class=\"mbr-iconfont mbri-idea\"></span>\n                                </a>\n                            </div>\n                            <h5 mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" class=\"mbr-fonts-style\">\n                                H1</h5>\n                        </div>\n\n                        <div class=\"card col-12 col-md-6\" mbr-class=\"{'col-lg-3':cardsCount=='4', 'col-lg-4':cardsCount=='3'}\" mbr-if=\"cardsCount>3\">\n                            <div mbr-if=\"showIcons\" class=\"icon-block\">\n                                <a href=\"https://mobirise.co/\">\n                                    <span mbr-icon class=\"mbr-iconfont mbri-contact-form\"></span>\n                                </a>\n                            </div>\n                            <h5 mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" class=\"mbr-fonts-style\">\n                                Bibliografía</h5>\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rFdKesHAwe",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header12-j"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "footer6",
+          "_customHTML": "<section group=\"Footers\" global=\"\" once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2019 Mobirise - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "rFdWRpzP6C",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer6-s"
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "meta_descr": "Web Site Builder Description",
+        "title": "¿Quiénes somos?",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            },
+            "H1": {
+              "color": "#f7ed4a"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    ¿QUIÉNES SOMOS?</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-black-outline\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">LEARN MORE</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rFdEJw3eQ2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header16-g"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".testimonials-container": {
+              "margin": "0 auto",
+              ".testimonials-item": {
+                "justify-content": "center",
+                "margin-top": "3rem",
+                "-webkit-justify-content": "center",
+                ".user": {
+                  "& when (@crdsBg)": {
+                    "background": "@cardsColor"
+                  },
+                  "&.row": {
+                    "margin": "0"
+                  },
+                  ".user_image": {
+                    "width": "150px",
+                    "height": "150px",
+                    "overflow": "hidden",
+                    "margin": "2rem auto 2rem auto",
+                    "img": {
+                      "width": "100%",
+                      "min-width": "100%",
+                      "min-height": "100%"
+                    }
+                  },
+                  ".testimonials-caption": {
+                    "padding": "2rem",
+                    "& when (@showImage)": {
+                      "padding": "2rem 2rem 2rem 0"
+                    }
+                  }
+                }
+              }
+            },
+            "@media (max-width: 260px)": {
+              ".user_image": {
+                "width": "100% !important",
+                "height": "auto !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".testimonials-caption": {
+                "& when (@showImage)": {
+                  "padding": "0 2rem 2rem 2rem !important"
+                }
+              }
+            },
+            ".user_text": {
+              "color": "#f7ed4a"
+            },
+            ".user_name": {
+              "color": "#f7ed4a"
+            }
+          },
+          "_name": "testimonials4",
+          "_customHTML": "<section class=\"testimonials4\" group=\"Testimonials\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n  <mbr-parameters>\n  <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n    <input type=\"checkbox\" title=\"Show Biography\" name=\"showBiography\">\n    <input type=\"checkbox\" title=\"Show Images\" name=\"showImage\" checked>\n    <input type=\"range\" inline title=\"Items\" name=\"testimonialsItems\" min=\"1\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"checkbox\" title=\"Cards Background\" name=\"crdsBg\" checked>\n    <input type=\"color\" title=\"Cards Color\" name=\"cardsColor\" value=\"#232323\" condition=\"crdsBg\">\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n      <input type=\"color\" title=\"Background Color\" value=\"#f7ed4a\" selected>\n      <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters --> \n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div class=\"container\">\n    <h2 class=\"pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n        WHAT OUR FANTASTIC USERS SAY\n    </h2>\n    <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n        Click any text to edit or style it. Click blue \"Gear\" icon in the top right corner to hide/show images, titles and change the amount items or the block and cards background.\n    </h3>\n    <div mbr-list mbr-list-grow=\"testimonialsItems\" class=\"col-md-10 testimonials-container\"> \n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.28-3-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text \">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\">Me llamo Víctor Mauricio Castillo Tello, actualmente soy estudiante de pregrado de la carrera de ingeniería biomédica. Me considero una persona responsable y respetuosa, pues creo que en estos dos valores se fundamentan las habilidades blandas que son muy importantes para el desarrollo profesional. Escogi esta carrera ya que me apasiona porque cada día se pueden desarrollar nuevos conocimientos gracias a las investigaciones y en base a ellas realizar innovaciones que pueden llegar a tener un gran impacto positivo en la salud de las  personas. Espero poder ayudar a muchas personas a llevar una mejor calidad de vida y creo que con esta carrera sera posible.</p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-if=\"showName\" mbr-theme-style=\"display-7\" data-app-selector=\".user_name\">\n                 Víctor Castillo</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DESIGNER\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.28-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text\">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\">Me llamo Manuel Adrián Hernández Lam, soy estudiante de la carrera de Ingeniería Biomédica, apasionado por las ciencias. Soy una persona amable y aplicada dispuesta a ayudar con las necesidades de los demás. Me gusta ayudar, por lo que esta carrera aplica aquello que me apasiona para poder ayudar a los demás. Soy responsable y será un placer apoyar a quienes necesitan servicios básicos en salud.&nbsp;<br></p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".user_name\">\n                 Manuel Hernández</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DEVELOPER\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "rFdE7uuf4C",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "testimonials4-d"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".testimonials-container": {
+              "margin": "0 auto",
+              ".testimonials-item": {
+                "justify-content": "center",
+                "margin-top": "3rem",
+                "-webkit-justify-content": "center",
+                ".user": {
+                  "& when (@crdsBg)": {
+                    "background": "@cardsColor"
+                  },
+                  "&.row": {
+                    "margin": "0"
+                  },
+                  ".user_image": {
+                    "width": "150px",
+                    "height": "150px",
+                    "overflow": "hidden",
+                    "margin": "2rem auto 2rem auto",
+                    "img": {
+                      "width": "100%",
+                      "min-width": "100%",
+                      "min-height": "100%"
+                    }
+                  },
+                  ".testimonials-caption": {
+                    "padding": "2rem",
+                    "& when (@showImage)": {
+                      "padding": "2rem 2rem 2rem 0"
+                    }
+                  }
+                }
+              }
+            },
+            "@media (max-width: 260px)": {
+              ".user_image": {
+                "width": "100% !important",
+                "height": "auto !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".testimonials-caption": {
+                "& when (@showImage)": {
+                  "padding": "0 2rem 2rem 2rem !important"
+                }
+              }
+            },
+            ".user_text": {
+              "color": "#f7ed4a"
+            },
+            ".user_name": {
+              "color": "#f7ed4a"
+            }
+          },
+          "_name": "testimonials4",
+          "_customHTML": "<section class=\"testimonials4\" group=\"Testimonials\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n  <mbr-parameters>\n  <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n    <input type=\"checkbox\" title=\"Show Biography\" name=\"showBiography\">\n    <input type=\"checkbox\" title=\"Show Images\" name=\"showImage\" checked>\n    <input type=\"range\" inline title=\"Items\" name=\"testimonialsItems\" min=\"1\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"checkbox\" title=\"Cards Background\" name=\"crdsBg\" checked>\n    <input type=\"color\" title=\"Cards Color\" name=\"cardsColor\" value=\"#232323\" condition=\"crdsBg\">\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n      <input type=\"color\" title=\"Background Color\" value=\"#f7ed4a\" selected>\n      <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters --> \n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div class=\"container\">\n    <h2 class=\"pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n        WHAT OUR FANTASTIC USERS SAY\n    </h2>\n    <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n        Click any text to edit or style it. Click blue \"Gear\" icon in the top right corner to hide/show images, titles and change the amount items or the block and cards background.\n    </h3>\n    <div mbr-list mbr-list-grow=\"testimonialsItems\" class=\"col-md-10 testimonials-container\"> \n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.28-1-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text \">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\">Mi nombre es Astrid Isabel Morán Alvarez, actualmente soy estudiante de pregrado de la especialidad de Ingeniería Biomédica. Soy una persona muy perseverante dispuesta a aprender los diversos ámbitos que presenta la ciencia. Escogí esta carrera porque siempre he sentido curiosidad y pasión por poder aplicar la tecnología al sector salud, además de un gusto por la investigación, innovación y desarrollo. Mi meta es con conocimientos de mi carrera poder mejorar el sistema de salud peruano, contribuyendo con mejorar la calidad de atención a los pacientes e innovar con nuevos dispositivos médicos que faciliten la atención en salud.&nbsp;<br></p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-if=\"showName\" mbr-theme-style=\"display-7\" data-app-selector=\".user_name\">\n                 Astrid Morán</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DESIGNER\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.28-2-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text\">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\"></p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".user_name\">\n                 Marco Peña</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DEVELOPER\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "rFdE7Zo1kf",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "testimonials4-e"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".testimonials-container": {
+              "margin": "0 auto",
+              ".testimonials-item": {
+                "justify-content": "center",
+                "margin-top": "3rem",
+                "-webkit-justify-content": "center",
+                ".user": {
+                  "& when (@crdsBg)": {
+                    "background": "@cardsColor"
+                  },
+                  "&.row": {
+                    "margin": "0"
+                  },
+                  ".user_image": {
+                    "width": "150px",
+                    "height": "150px",
+                    "overflow": "hidden",
+                    "margin": "2rem auto 2rem auto",
+                    "img": {
+                      "width": "100%",
+                      "min-width": "100%",
+                      "min-height": "100%"
+                    }
+                  },
+                  ".testimonials-caption": {
+                    "padding": "2rem",
+                    "& when (@showImage)": {
+                      "padding": "2rem 2rem 2rem 0"
+                    }
+                  }
+                }
+              }
+            },
+            "@media (max-width: 260px)": {
+              ".user_image": {
+                "width": "100% !important",
+                "height": "auto !important"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".testimonials-caption": {
+                "& when (@showImage)": {
+                  "padding": "0 2rem 2rem 2rem !important"
+                }
+              }
+            },
+            ".user_text": {
+              "color": "#f7ed4a"
+            },
+            ".user_name": {
+              "color": "#f7ed4a"
+            }
+          },
+          "_name": "testimonials4",
+          "_customHTML": "<section class=\"testimonials4\" group=\"Testimonials\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n  <mbr-parameters>\n  <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n    <input type=\"checkbox\" title=\"Show Name\" name=\"showName\" checked>\n    <input type=\"checkbox\" title=\"Show Biography\" name=\"showBiography\">\n    <input type=\"checkbox\" title=\"Show Images\" name=\"showImage\" checked>\n    <input type=\"range\" inline title=\"Items\" name=\"testimonialsItems\" min=\"1\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"checkbox\" title=\"Cards Background\" name=\"crdsBg\" checked>\n    <input type=\"color\" title=\"Cards Color\" name=\"cardsColor\" value=\"#232323\" condition=\"crdsBg\">\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n      <input type=\"color\" title=\"Background Color\" value=\"#f7ed4a\" selected>\n      <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters --> \n  </mbr-parameters>\n\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n  </div>\n  <div class=\"container\">\n    <h2 class=\"pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n        WHAT OUR FANTASTIC USERS SAY\n    </h2>\n    <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style mbr-white align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n        Click any text to edit or style it. Click blue \"Gear\" icon in the top right corner to hide/show images, titles and change the amount items or the block and cards background.\n    </h3>\n    <div mbr-list mbr-list-grow=\"testimonialsItems\" class=\"col-md-10 testimonials-container\"> \n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.27-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text \">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\">Mi nombre completo es Mateo Luis Portal von Hesse. Pertenezco a la carrera de ingeniería biomédica de la PUCP-UPCH y actualmente me encuentro cursando el segundo ciclo de carrera. Me considero una persona honesta, empática, perseverante, amigable, que le gusta estar informada y muy solidaria. Puedo decir que hice una excelente elección al escoger la carrera puesto que tiene una inmensa proyección a futuro acá en el Perú y me siento bien sabiendo que puedo contribuir al crecimiento y desarrollo del país fuera del ámbito político porque era algo que quería hacer desde pequeño.&nbsp;</p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-if=\"showName\" mbr-theme-style=\"display-7\" data-app-selector=\".user_name\">\n                 Mateo Portal</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DESIGNER\n            </div>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"testimonials-item\">\n        <div class=\"user row\">\n          <div class=\"col-lg-3 col-md-4\" mbr-if=\"showImage\">\n            <div class=\"user_image\">\n              <img src=\"@PROJECT_PATH@/assets/images/whatsapp-image-2019-10-17-at-17.22.27-1-300x400.jpg\" alt title>\n            </div>\n          </div>\n          <div class=\"testimonials-caption\" mbr-class=\"{'col-lg-9 col-md-8':showImage}\">\n            <div class=\"user_text\">\n              <p class=\"mbr-fonts-style \" mbr-theme-style=\"display-7\" data-app-selector=\".user_text\">Me llamo Sebastián Elías Rodríguez Ríos y soy un estudiante de pregrado de Ingeniería Biomédica, soy apasionado a la creación de contenido literario y disfruto desarrollar variedad de disciplinas. Me considero una persona práctica y realista, &nbsp;ya que usualmente encuentro formas más rápidas, sencillas y aterrizadas de realizar distintas acciones de la vida diaria, me siento a gusto con mi carrera ya que me permite explorar distintas perspectivas del mundo de la salud, investigar varios tipos de ciencias como química, anatomía, telecomunicaciones y administración por citar algunos y descubrir maneras de como agilizar y optimizar el sistema actual.&nbsp;<br></p>\n            </div>\n            <div mbr-text class=\"user_name mbr-bold mbr-fonts-style align-left pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showName\" data-app-selector=\".user_name\">\n                 Sebastián Rodríguez</div>\n            <div mbr-text class=\"user_desk mbr-light mbr-fonts-style align-left pt-2\" mbr-theme-style=\"display-7\" mbr-if=\"showBiography\" data-app-selector=\".user_desk\">\n                 DEVELOPER\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "rFdEa4fEAv",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "testimonials4-f"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "footer6",
+          "_customHTML": "<section group=\"Footers\" global=\"\" once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2019 Mobirise - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "rFdWRpzP6C",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer6-s"
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "meta_descr": "Web Site Generator Description",
+        "title": "H1",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "H1": {
+              "color": "#e4d295"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#7f1933\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    HITO 1: DEFINICIÓN, NECESIDAD Y PÚBLICO OBJETIVO</h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">\n                        <span class=\"mbr-iconfont mbri-file\"></span>LEARN MORE</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rFdS4S7GCb",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header1-k"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "H2": {
+              "color": "#cc2952"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#e4d295\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"><b>\n                    DEFINICIÓN DEL PROBLEMA</b></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Shape your future web project with sharp design and refine coded functions.\n                </h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdTzy7lDA",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-m"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p>Según el libro “Guía de respuestas en diabetes, colaboración intersociedades Andalucía”, la diabetes mellitus es un problema de salud de gran impacto sanitario y global, con una gran prevalencia, siendo una de las principales causas de ceguera, insuficiencia renal terminal, amputación de miembros inferiores y enfermedad vascular. Esto nos hace notar lo urgente y amplio que es el campo de trabajo en esta área, y las muchas oportunidades de introducir el concepto de innovación. En esta oportunidad nos concentraremos en una de las dos clases de Diabetes mellitus existentes, la Diabetes mellitus tipo 2.</p><p><span style=\"font-size: 1.2rem;\">Al saber que la enfermedad solo empeora conforme pasa el tiempo, se necesita de controles y chequeos paulatinos que frecuentemente demandan tiempo de la persona que padece la enfermedad. Esto se debe a que el paciente debe recurrir al hospital para poder realizarse los análisis de sangre, ya que en las mayoría de los casos este no cuenta con un glucómetro que pueda usar fuera del centro médico, ya que no puede cubrir el costo y el hospital no brinda este tipo de facilidades a sus pacientes.&nbsp;</span><br></p><p>En esta situación, los pacientes se ven obligados a asistir periódicamente al hospital, lo cual afecta a su dura situación, complicando aún más, al gastar todo su tiempo en realizarse los controles en el hospital.\n</p><p>A partir de esto, surge una problemática en la mayoría de pacientes que no cuentan con los suficientes recursos para abastecerse del equipo médico, como lo es el glucómetro, que requieren para hacerse un correcto seguimiento. Y es que ellos dependen del centro de salud para saber su condiciones actuales y la evolución de la enfermedad. \n</p><p>Con esta dependencia, el hospital es quien ofrece sus servicios dentro del centro de salud. Pero así como ocurre con el equipo médico, el cual no es ofrecido por el hospital fuera de su área de control, lo mismo sucede con el seguimiento del paciente. Una vez que el paciente abandona el hospital, este se desentiende del estilo de vida de la persona enferma, ya que no se les hace un seguimiento adecuado al terminar su chequeo médico, permitiendo que la enfermedad pueda seguir evolucionando si es que el paciente no ha controla su estilo de vida, lo cual es lo que usualmente sucede con los pacientes.\n</p><p>Además, la mayoría de los hospitales ni siquiera cuentan con un registro clínico digitalizado de sus pacientes, por lo que deben seguir trabajando con miles de papeles que solo dificultan y ralentizan el control de las personas enfermas, haciendo que sea casi imposible hacer un seguimiento al paciente.\n</p><p>\n</p><p>Entonces, si el paciente depende plenamente del hospital para realizarse los controles, y el hospital no le brinda las facilidades al paciente ni le hace un seguimiento para poder saber cómo está evolucionando su enfermedad y su estilo de vida, esto genera un problema mayor: el paciente no recibe un seguimiento correcto fuera del hospital, generandole una inversión de tiempo al tener que ir paulatinamente, perjudicando su salud y afectando el desarrollo de su enfermedad.\n</p><p><br></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdT868kKV",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-l"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "background": "@bgColor",
+            "& when (@fullWidth = false)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(0deg, @color2, @bgColor)"
+            },
+            ".image-block": {
+              "margin": "auto",
+              "& when (@fullWidth)": {
+                "width": "100% !important"
+              }
+            },
+            "figcaption": {
+              "position": "relative",
+              "div": {
+                "position": "absolute",
+                "bottom": "0",
+                "width": "100%"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".image-block": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "image3",
+          "_customHTML": "<section group=\"Images & Videos\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"4\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">        \n        \n        <input type=\"range\" inline title=\"Width\" name=\"imageSize\" min=\"20\" max=\"100\" value=\"80\" step=\"1\" condition=\"fullWidth==false\">\n\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" condition=\"fullWidth==false\">\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" checked condition=\"fullWidth==false\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#ffffff\" condition=\"gradientBg && fullWidth==false\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <figure class=\"mbr-figure\" mbr-class=\"{'container':fullWidth==false}\">\n            <div class=\"image-block\" mbr-style=\"{'width':imageSize+'%'}\">\n                <img src=\"@PROJECT_PATH@/assets/images/descarga-133x133.png\" width=\"1400\" alt=\"Mobirise\" title>\n                <figcaption class=\"mbr-figure-caption mbr-figure-caption-over\" mbr-if=\"showText\">\n                    <div mbr-text class=\"container pb-5 mbr-white align-center mbr-fonts-style\" mbr-theme-style=\"display-1\"></div>\n                </figcaption>\n            </div>\n    </figure>\n</section>",
+          "_cid": "rFea3jenuY",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image3-w"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "H2": {
+              "color": "#cc2952"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#e4d295\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"><b>\n                    NECESIDAD DEL MERCADO</b></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Shape your future web project with sharp design and refine coded functions.\n                </h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdVnWTgLO",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-n"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p>Actualmente en nuestro país existe mucha preferencia hacia tecnologías extranjeras orientadas a salud dada la escasez de oferta peruana. No existe mucha competencia interna, pues al haber pocas empresas encargadas del comercio de artículos médicos, se crea una especie de monopolio en la que la innovación peruana en sector de medicina tiene poca o ninguna relevancia.\n&nbsp;</p><p>La innovación peruana se ha caracterizado por ser escasa, debido a que el mercado se enfoca mucho más en la venta de productos y no en el desarrollo de nuevos, esto debido a su alto costo y al poco impulso otorgado por el gobierno en políticas de investigación y desarrollo. Aún así, cabe destacar que en los últimos años se puede notar una creciente tendencia a invertir en sectores influenciados por la biotecnología, en especial en telemedicina, según lo comenta el portal “El Economista, Perú”  en un artículo publicado, donde indica:\n</p><p>“La autoridad de salud en el Perú se puso como meta al 2021 tener el 70% de sus centros de salud digitalizados, implementados con Historias Clínicas Digitales. Además, a inicios de año, el Ministerio de Salud decidió publicar el proyecto de documento técnico: \"Estrategia de Gobierno Digital del Sector Salud 2019-2022\", que abarca el despliegue del expediente  digital, provisión de servicios por Telesalud, mejoramiento de la toma de decisiones clínicas con base en el conocimiento (Big Data, Machine Learning y otros), entre otros.\n</p><p>A pesar de los avances, los cuales son gigantes comparados a las anteriores políticas, todavía priman la compra y venta de artículos comunes que si bien son útiles muchas veces no aportan una innovación sustanciosa ni un valor agregado. Actualmente los más comunes son los aplicadores de insulina y los hemoglucotest.\n</p><p>Con estos datos se puede concluir, que a pesar de que ya se ha comenzado a tomar cierta iniciativa, aún hay un largo camino por recorrer en lo que a innovación médica se refiere en este país, se debe tener en cuenta que dicha innovación será de gran beneficio para todos los peruanos ya que es lo que actualmente el servicio de salud necesita más, se requiere sistemas que permitan el seguimiento del paciente con ciertas enfermedades, así como el desarrollo de políticas de salud que faciliten el acceso del hospital al paciente y viceversa.\n</p><p><br></p><p><b><br></b></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdVBnroin",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-o"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-section-subtitle": {
+              "color": "#767676"
+            },
+            "H2": {
+              "color": "#cc2952"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section content4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#e4d295\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"title col-12 col-md-8\">\n                <h2 mbr-if=\"showTitle\" class=\"align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\"><b>\n                    PÚBLICO OBJETIVO</b></h2>\n                <h3 mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Shape your future web project with sharp design and refine coded functions.\n                </h3>\n                <div class=\"mbr-section-btn align-center py-4\" mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-4\">\n                    <a class=\"btn btn-primary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                    <a class=\"btn btn-black-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdVC7BEql",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-p"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><div>Nuestro público objetivo son, por una parte, los diabéticos que no son capaces de comprar los medicamentos que requieren por ser de bajos recursos, y que no reciben un seguimiento de su enfermedad. \n</div><div>Por otro lado, están también los familiares de estos pacientes que, en este caso, influyen directamente con su situación actual. \n</div><div><br></div></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFdVCy0Jyu",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-q"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "footer6",
+          "_customHTML": "<section group=\"Footers\" global=\"\" once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2019 Mobirise - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "rFdWRpzP6C",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer6-s"
+        }
+      ]
+    },
+    "page3.html": {
+      "settings": {
+        "meta_descr": "Site Maker Description",
+        "title": "Bibliografía",
+        "order": 3
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "footer6",
+          "_customHTML": "<section group=\"Footers\" global=\"\" once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#2e2e2e\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2019 Mobirise - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>\n",
+          "_cid": "rFdWRpzP6C",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer6-t"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            },
+            "H1": {
+              "color": "#efefef"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#073b4c\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    BIBLIOGRAFÍA</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-black-outline\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">LEARN MORE</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rFe07WPFoe",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header16-u"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-text, blockquote": {
+              "color": "#767676"
+            }
+          },
+          "_name": "content1",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Width Content\" name=\"widthContent\" min=\"1\" max=\"4\" step=\"1\" value=\"2\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article mbr-class=\"{'col-md-6': widthContent == 1, 'col-md-8': widthContent == 2, 'col-md-10': widthContent == 3, 'col-md-12': widthContent == 4}\"><p>[1] María Rosa Sánchez Pérez, et al.. (2014). Guías de respuestas en diabetes; colaboración intersociedades Andalucía. 25 de setiembre del 2019, de SEMERGEN Sitio web: http://www.semergenandalucia.org/docs/libroDiabetes.pdf\n</p><p><b>\n</b></p><p>[2] American Diabetes Association. (2010). Choose To Live. 16 de Octubre del 2019. Sitio Web : file:///home/chronos/u-8c3c0e6f69a5ebb563fe8c29299747b616ee872a/MyFiles/\n</p><p><b style=\"font-size: 1.2rem;\"></b><br></p><p>[3] National Institute of Diabetes and Digestive and Kidney Diseases Health . (2016). Control de la diabetes. 16 de Octubre del 2019, de National Institute of Health. Sitio web: https://www.niddk.nih.gov/health-information/informacion-de-la-salud/diabetes/informacion-general/control\n</p><p><b>\n</b></p><p>[4] Soumitra Dutta, Bruno Lanvin, Sacha Wunsch-Vincent. (2019). GLOBAL INNOVATION INDEX 2019. 16 de Octubre del 2019, de Cornell SC Johnson College of Business. Sitio web: https://www.wipo.int/edocs/pubdocs/en/wipo_pub_gii_2019.pdf\n</p><p><b>\n</b></p><p>[5] El Economista América, Perú. (2019). Tecnología en Salud: ¿Qué se está haciendo en el Perú?. 16 de Octubre del 2019, de elEconomista América, Perú Sitio web: https://www.eleconomistaamerica.pe/empresas-eAm-peru/noticias/9713976/02/19/Tecnologia-en-Salud-que-se-esta-haciendo-en-el-Peru.html\n</p><p><b><br></b></p></div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rFe0aXBXdR",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-v"
+        }
+      ]
+    }
+  }
+}
